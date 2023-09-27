@@ -1,14 +1,12 @@
-# Nickolas Davi Vieira Lima
-
 import os
 
-def salaryAdjustment(slr): # Função para cálculo de reajuste e porcentagem. Recebe o salário.
+def salaryAdjustment(slr):
     
-    if slr <= 280: # Verificação do valor do salário.
-        newSlr = slr + (slr * 20 / 100) # Cálculo do salário.
-        ics = newSlr - slr # Cálculo do valor do aumento
-        pct = (newSlr - slr) / slr * 100 # Cálculo da porcentagem.
-        return pct, ics, newSlr # Retorno do percentual, valor do aumento e novo salário.
+    if slr <= 280:
+        newSlr = slr + (slr * 20 / 100)
+        ics = newSlr - slr
+        pct = (newSlr - slr) / slr * 100
+        return pct, ics, newSlr
     elif 280 < slr < 700:
         newSlr = slr + (slr * 15 / 100)
         ics = newSlr - slr
@@ -25,24 +23,24 @@ def salaryAdjustment(slr): # Função para cálculo de reajuste e porcentagem. R
         pct = (newSlr - slr) / slr * 100
         return pct, ics, newSlr
 
-while True: # Loop While True.
+while True:
 
-    print('Escolha uma opção:\n') # Menu de opções.
+    print('Escolha uma opção:\n')
     print('1 - Inserir salário;')
     print('0 - Encerrar.')
-    option = int(input('\nOpção: ')) # Leitura da opção.
+    option = int(input('\nOpção: '))
     
     os.system('cls')
     
-    match option: # Match Case da opção.
+    match option:
         case 1:
-            salary = float(input('\nSalário (R$): ')) # Leitura do salário.
+            salary = float(input('\nSalário (R$): '))
 
-            adjustment = salaryAdjustment(salary) # Variável reajuste recebe função.
+            adjustment = salaryAdjustment(salary)
 
-            percentage, increase, newSalary = adjustment # Atribuição dos respectivos valores retornados.
+            percentage, increase, newSalary = adjustment
 
-            print('\nInformações salariais: ') # Saída.
+            print('\nInformações salariais: ')
             print(f'Salário original (R$): {salary:.2f}')
             print(f'Aumento salarial (%): {percentage:.0f}')
             print(f'Valor do aumento (R$): {increase:.2f}')
