@@ -53,4 +53,4 @@ while True:
             print('Programa encerrado.')
             break
         case _:
-            print('Opção iválida.')
+            print('Opção inválida.')
