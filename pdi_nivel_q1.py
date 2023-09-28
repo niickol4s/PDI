@@ -23,11 +23,15 @@ def salaryAdjustment(slr):
         pct = (newSlr - slr) / slr * 100
         return pct, ics, newSlr
 
-while True:
-
-    print('Escolha uma opção:\n')
+def menu():
+    print('\nEscolha uma opção:\n')
     print('1 - Inserir salário;')
     print('0 - Encerrar.')
+
+while True:
+
+    menu()
+    
     option = int(input('\nOpção: '))
     
     os.system('cls')
@@ -50,4 +54,3 @@ while True:
             break
         case _:
             print('Opção iválida.')
-            option = int(input('Opção: '))
